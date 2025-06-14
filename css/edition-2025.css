@@ -1,0 +1,872 @@
+/* Styles spécifiques pour la page édition 2025 */
+
+/* Styles généraux pour la page */
+.edition-2025 {
+  color: var(--text-dark);
+  background-color: var(--beige-light);
+}
+
+/* Styles de la navbar améliorés */
+.edition-2025 .navbar {
+  transition: all 0.3s ease;
+}
+
+/* Style pour les liens de navigation quand la navbar est transparente */
+.edition-2025 .navbar:not(.scrolled) .nav-link {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 0 5px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.edition-2025 .navbar:not(.scrolled) .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.edition-2025 .navbar:not(.scrolled) .nav-link.active {
+  background-color: var(--red-primary);
+  color: white;
+}
+
+/* Hero Section */
+.edition-2025 .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.edition-2025 .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.edition-2025 .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.edition-2025 .hero-content {
+  position: relative;
+  z-index: 10;
+  color: var(--text-light);
+  max-width: 48rem;
+  padding: 6rem 0;
+}
+
+.edition-2025 .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.edition-2025 .hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/* Section Overview - Exactement comme sur index */
+.edition-2025 .section.bg-beige-light {
+  position: relative;
+  background-color: var(--beige-light);
+  padding: 5rem 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+}
+
+.edition-2025 .section.bg-beige-light .container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.edition-2025 .section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .edition-2025 .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.edition-2025 .section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* MODIFICATION: Animation du trait rouge sous les titres */
+.edition-2025 .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--red-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.edition-2025 .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--red-primary);
+  transition: width 0.3s ease;
+}
+
+.edition-2025 .section-title:hover::after {
+  width: 100px;
+}
+
+.edition-2025 .section-text {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  width: 100%;
+  text-align: justify;
+}
+
+
+/* Stats Grid */
+.edition-2025 .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.edition-2025 .stat-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.edition-2025 .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--red-primary);
+  margin-bottom: 0.5rem;
+}
+
+.edition-2025 .stat-label {
+  display: block;
+  font-size: 1rem;
+  color: var(--gray-600);
+}
+
+/* Section des thématiques */
+.edition-2025 .section.bg-beige-dark {
+  background-color: var(--beige-dark);
+  padding: 5rem 0;
+}
+
+.edition-2025 .section.bg-beige-dark .container-custom {
+  max-width: 100%;
+  padding: 0;
+}
+
+.edition-2025 .section.bg-beige-dark .fade-in {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+/* MODIFICATION: Animation du trait rouge sous les titres centrés */
+.edition-2025 .section.bg-beige-dark .section-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edition-2025 .section.bg-beige-dark .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.edition-2025 .section.bg-beige-dark .section-title:hover::after {
+  width: 100px;
+}
+
+.edition-2025 .section.bg-beige-dark .section-text {
+  text-align: center;
+}
+
+/* MODIFICATION: Ajouter de l'espace autour du slider */
+.edition-2025 .slider {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  height: 80vh;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration de l'indication du thème actif */
+.edition-2025 .slider .theme-indicator {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 20;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 30px;
+  max-width: 80%;
+  margin: 0 auto;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.edition-2025 .slider .list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.edition-2025 .slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.edition-2025 .slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* MODIFICATION: Couleurs différentes pour chaque slide */
+.edition-2025 .slider .list .item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #000 40%, transparent);
+  transition: background-image 0.5s ease;
+}
+
+.edition-2025 .slider .list .item:nth-child(1)::after {
+  background-image: linear-gradient(to top, rgb(156, 2, 2) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(2)::after {
+  background-image: linear-gradient(to top, rgb(190, 64, 15)  40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(3)::after {
+  background-image: linear-gradient(to top, rgb(25, 71, 139) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(4)::after {
+  background-image: linear-gradient(to top, rgb(25, 71, 139) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(5)::after {
+  background-image: linear-gradient(to top, rgb(25, 71, 139) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(6)::after {
+  background-image: linear-gradient(to top, rgb(190, 64, 15) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(7)::after {
+  background-image: linear-gradient(to top, rgb(2, 41, 19)  40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(8)::after {
+  background-image: linear-gradient(to top, rgb(156, 2, 2) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(9)::after {
+  background-image: linear-gradient(to top, rgba(148, 139, 139, 0.993) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(10)::after {
+  background-image: linear-gradient(to top, rgb(2, 41, 19) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item:nth-child(11)::after {
+  background-image: linear-gradient(to top, rgba(148, 139, 139, 0.993) 40%, transparent);
+}
+
+.edition-2025 .slider .list .item .content {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+  color: var(--text-light);
+}
+
+.edition-2025 .slider .list .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.edition-2025 .slider .list .item .content h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.edition-2025 .slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* MODIFICATION: Amélioration des flèches de navigation */
+.edition-2025 .slider .arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 80px); /* Réduire la largeur pour espacer des bords */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px; /* Ajouter des marges égales */
+  z-index: 100;
+}
+
+.edition-2025 .slider .arrows button#prev {
+  position: absolute;
+  left: 20px;
+}
+
+.edition-2025 .slider .arrows button#next {
+  position: absolute;
+  right: 20px;
+}
+
+.edition-2025 .slider .arrows button {
+  background-color: var(--red-primary);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: 0.3s;
+  opacity: 0.7;
+  border: none;
+  cursor: pointer;
+}
+
+.edition-2025 .slider .arrows button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.edition-2025 .slider .arrows button#prev:before {
+  content: "‹";
+}
+
+.edition-2025 .slider .arrows button#next:before {
+  content: "›";
+}
+
+/* Miniatures - Modification pour assurer la visibilité des dernières miniatures */
+.edition-2025 .slider .thumbnail {
+  position: absolute;
+  bottom: 20px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 550px; /* Limiter pour afficher environ 4 miniatures */
+  height: 100px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: auto; /* Permettre le défilement si nécessaire */
+  justify-content: flex-start; /* Aligner à gauche pour mieux voir le défilement */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-primary) rgba(255, 255, 255, 0.2);
+  /* Ajouter un padding à droite pour s'assurer que la dernière miniature est visible */
+  padding-right: 40px;
+}
+
+/* Amélioration de la miniature active */
+.edition-2025 .slider .thumbnail .item.active {
+  filter: brightness(1.2);
+  border: 3px solid var(--red-primary);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  transform: scale(1.15); /* Zoom sur la miniature active */
+  transition: transform 0.3s ease;
+}
+
+.edition-2025 .slider .thumbnail .item {
+  width: 120px;
+  height: 80px;
+  filter: brightness(0.7);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 5px;
+  border: 3px solid transparent;
+}
+
+/* Assurer que les miniatures aux extrémités ne sont pas coupées */
+.edition-2025 .slider .thumbnail .item:first-child {
+  margin-left: 10px;
+}
+
+.edition-2025 .slider .thumbnail .item:last-child {
+  margin-right: 20px; /* Augmenter la marge droite pour la dernière miniature */
+}
+
+.edition-2025 .slider .thumbnail::-webkit-scrollbar {
+  width: 0;
+}
+
+.edition-2025 .slider .thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.edition-2025 .slider .thumbnail .item .content {
+  position: absolute;
+  inset: auto 10px 10px 10px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+/* Ajouter un effet de zoom sur le slide actif */
+.edition-2025 .slider .list .item.active img {
+  transform: scale(1.05); /* Légèrement zoomé */
+  transition: transform 0.5s ease;
+}
+
+.edition-2025 .slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Section CTA */
+.edition-2025 .section.bg-red-primary {
+  background-color: var(--red-primary);
+  color: var(--text-light);
+  padding: 5rem 0;
+}
+
+.edition-2025 .cta-content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.edition-2025 .cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.edition-2025 .cta-text {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.edition-2025 .btn-white {
+  display: inline-block;
+  background-color: var(--text-light);
+  color: var(--red-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.edition-2025 .btn-white:hover {
+  background-color: var(--beige-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.edition-2025 .footer {
+  background-color: var(--red-primary);
+  color: var(--text-light);
+  padding: 3rem 0 1.5rem;
+}
+
+.edition-2025 .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .edition-2025 .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Centrer les liens rapides dans le footer */
+.edition-2025 .footer-col:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.edition-2025 .footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center; /* Centre les liens horizontalement */
+  text-align: center;
+}
+
+/* Assurer que tous les titres de colonnes du footer sont également centrés */
+.edition-2025 .footer-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Optionnel: centrer également le contenu des autres colonnes pour une apparence uniforme */
+.edition-2025 .footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.edition-2025 .footer-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.edition-2025 .footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.edition-2025 .footer-text {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.edition-2025 .social-link:hover {
+  background-color: var(--text-light);
+  color: var(--red-primary);
+}
+
+.edition-2025 .footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edition-2025 .footer-link {
+  transition: all 0.3s ease;
+}
+
+.edition-2025 .footer-link:hover {
+  color: var(--beige-light);
+}
+
+.edition-2025 .footer-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edition-2025 .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Widget de traduction - Styles simplifiés et corrigés */
+.translation-widget {
+  position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.planet {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e74c3c, #f5f5dc, #b30000);  position: relative;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #f7f7f7;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  animation: rotate 20s linear infinite;
+}
+
+.planet::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.7)' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M2 12h20'%3E%3C/path%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'%3E%3C/path%3E%3C/svg%3E")
+    center / cover no-repeat;
+}
+
+.planet::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
+
+.planet:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(219, 9, 9, 0.8), 0 0 40px rgba(171, 12, 12, 0.4);
+}
+
+.orbit {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: orbit-rotate 10s linear infinite;
+  pointer-events: none;
+}
+
+.satellite {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5dc;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #e74c3c;
+  pointer-events: none;
+  top: 0;
+  left: 50%;
+}
+
+.language-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--beige-light);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 1000;
+}
+
+.language-options.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  color: var(--text-dark);
+}
+
+.language-option:hover {
+  background-color: var(--beige-dark);
+  color: var(--text-light);
+}
+
+.language-option img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
+  }
+}
+
+/* Animation pour l'apparition des options de langue */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+  }
+  70% {
+    transform: scale(1.05) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.language-option {
+  opacity: 0;
+  animation: pop-in 0.4s forwards;
+}
+
+.language-option:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.language-option:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.language-option:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .edition-2025 .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .edition-2025 .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .edition-2025 .section-title {
+    font-size: 2rem;
+  }
+
+  .edition-2025 .cta-title {
+    font-size: 2rem;
+  }
+
+  .edition-2025 .slider {
+    height: 70vh;
+  }
+
+  .edition-2025 .slider .list .item .content {
+    bottom: 15%;
+    width: 80%;
+  }
+
+  .edition-2025 .slider .list .item .content h2 {
+    font-size: 2rem;
+  }
+
+  .edition-2025 .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .edition-2025 .slider {
+    height: 60vh;
+  }
+
+  .edition-2025 .slider .list .item .content {
+    bottom: 10%;
+    width: 90%;
+  }
+
+  .edition-2025 .slider .list .item .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .edition-2025 .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
